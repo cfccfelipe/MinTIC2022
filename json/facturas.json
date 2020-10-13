@@ -1,0 +1,27 @@
+{
+    "0": {
+        "cedula": "1053857223",
+        "infocontacto": {
+            "nombre": "Saritha Loaiza",
+            "telefono": "8860308",
+            "correo": "sarisloar5@hotmail.com"
+        },
+        "productos": {
+            "cafe": 1000,
+            "queso": 2000
+        },
+        "totalfactura": 3000
+    },
+    "1": {
+        "cedula": "1053849221",
+        "infocontacto": {
+            "nombre": "Carlos Cortes",
+            "telefono": "8868308",
+            "correo": "cfccfelipe@gmail.com"
+        },
+        "productos": {
+            "Arroz": 200
+        },
+        "totalfactura": 200
+    }
+}
