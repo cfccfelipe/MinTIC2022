@@ -1,0 +1,36 @@
+{% extends 'tienda_virtual/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+    <div class="row">
+        <div class="section-title">
+            <h2>Carrito de Compras</h2>
+        </div>	
+        <div align="center">
+            <table width="500px" class="table_results">
+                <tr>	
+                    <td><b>Producto</b></td>
+                    <td><b>Costo</b></td>
+                    <td><b>Cantidad</b></td>
+                </tr>
+                
+                {% for producto in productos %}
+                    <tr class="table_results"> 
+                        <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.costo }}</td>
+                        <td>{{ producto.cantidad }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div align="center">
+            <br>
+            <a href='/tienda_virtual/portal_pagos/'><input type="button" tabindex="7" value="Pagar" id="btnPay" name="btnPay"></a>
+        </div>
+        
+    </div>
+    </div>
+</div>
+{% endblock %}

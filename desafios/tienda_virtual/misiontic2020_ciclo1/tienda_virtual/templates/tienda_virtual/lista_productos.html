@@ -1,0 +1,37 @@
+{% extends 'tienda_virtual/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+    <div class="row">
+        <div class="section-title">
+            <h2>Lista de Productos</h2>
+        </div>	
+    </div>
+    </div>
+</div>
+<div>
+    <div class="col-md-6" align="right">
+        <table width="200px" class="table_results">
+            <tr>	
+                <td class="table_results"><b>Producto</b></td>
+                <td><b>Costo</b></td>
+            </tr>
+            
+            {% for producto in productos %}
+                <tr class="table_results"> 
+                    <td  class="table_results">{{ producto.nombre }}</td>
+                    <td>{{ producto.costo }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="col-md-6">
+        <form method="POST">{% csrf_token %}
+            {{ frm_agregar.as_p }}
+            <input type="submit" value="Agregar" id="btnAdd" name="btnAdd">
+        </form>
+    </div>
+</div>
+{% endblock %}

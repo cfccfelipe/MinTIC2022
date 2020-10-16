@@ -1,0 +1,39 @@
+{% extends 'tienda_virtual/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="col-md-12">
+    <div class="row">
+        <div class="section-title">
+            <h2>Historial de Compras</h2>
+        </div>	
+        <div align="center">
+            <table width="1000px" class="table_results">
+                <tr>	
+                    <td class="table_results"><b>No. Compra</b></td>
+                    <td class="table_results"><b>Productos</b></td>
+                    <td class="table_results"><b>Nombre</b></td>
+                    <td class="table_results"><b>Fecha</b></td>
+                    <td class="table_results"><b>Dirección de Env&iacute;o</b></td>
+                    <td class="table_results"><b>Costo</b></td>
+                    <td class="table_results"><b>M&eacute;todo de Pago</b></td>
+                </tr>
+                {% for compra in historial %}
+                    <tr class="table_results"> 
+                        <td align="center" class="table_results">{{ compra.numero }}</td>
+                        <td class="table_results">{{ compra.productos }}</td>
+                        <td class="table_results">{{ compra.nombre }}</td>
+                        <td class="table_results">{{ compra.fecha }}</td>
+                        <td class="table_results">{{ compra.direccion }}</td>
+                        <td class="table_results">{{ compra.costo }}</td>
+                        <td class="table_results">{{ compra.metodo }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        
+    </div>
+    </div>
+</div>
+{% endblock %}
