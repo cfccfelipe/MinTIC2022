@@ -1,0 +1,5 @@
+artcurator/ArtCurator.class
+artcurator/ConnectionJDBC.class
+repositories/ArtPiece.class
+repositories/Exposition.class
+repositories/Museum.class
