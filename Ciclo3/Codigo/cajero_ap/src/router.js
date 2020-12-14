@@ -11,7 +11,7 @@ const router = new vueRouter({
             path: '/',
             name: "root",
             component: App
-        },
+            },
         {
             path: '/user/:username',
             name: "user",
@@ -24,4 +24,4 @@ const router = new vueRouter({
             },
         ]
     })
-    export default router
+export default router
